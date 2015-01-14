@@ -15,7 +15,7 @@ var defaults = {
 var appendVersionPlugin = function (extensions) {
 	return map(function (file, cb) {
 		if (!file) {
-			throw new PluginError('gulp-rev-append', 'Missing file option for gulp-rev-append.');
+			throw new PluginError('gulp-rev-append', 'Missing file option for gulp-version-append.');
 		}
 		if (!file.contents) {
 			throw new PluginError('gulp-rev-append', 'Missing file.contents required for modifying files using gulp-rev-append.');
