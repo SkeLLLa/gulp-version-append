@@ -1,6 +1,6 @@
 {
   "name": "gulp-version-append",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cache-busting plugin for gulp.",
   "keywords": [
     "gulp",
