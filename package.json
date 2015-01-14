@@ -1,0 +1,22 @@
+{
+  "name": "gulp-version-append",
+  "version": "0.0.1",
+  "description": "Cache-busting plugin for gulp.",
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "gulp-rev-append",
+    "cache-busting",
+    "cache",
+    "revision"
+  ],
+  "author": "Alexander Kureniov",
+  "email": "s@zxc.pp.ua",
+  "url": "https://github.com/SkeLLLa",
+  "main": "index.js",
+  "dependencies": {
+    "app-root-path": "^1.0.0",
+    "event-stream": "^3.2.1",
+    "gulp-util": "^3.0.2"
+  }
+}
