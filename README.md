@@ -42,3 +42,6 @@ gulp.task('html', function(){
 		  .pipe($.minifyHtml());
 });
 ```
+
+## Thanks
+Many thanks to @bustardcelly and his gulp-rev-append (https://github.com/bustardcelly/gulp-rev-append/) plugin that was taken as an example for this plugin.
