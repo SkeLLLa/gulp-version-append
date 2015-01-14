@@ -1,6 +1,6 @@
 {
   "name": "gulp-version-append",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Cache-busting plugin for gulp.",
   "keywords": [
     "gulp",
@@ -18,5 +18,18 @@
     "app-root-path": "^1.0.0",
     "event-stream": "^3.2.1",
     "gulp-util": "^3.0.2"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SkeLLLa/gulp-version-append.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SkeLLLa/gulp-version-append/issues"
+  },
+  "homepage": "https://github.com/SkeLLLa/gulp-version-append"
 }
