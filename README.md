@@ -17,6 +17,18 @@ In html code:
 ```
 <script src="/js/scriptname.js?v=@version@"></script>
 ```
+package.json:
+```
+{
+  "name": "my-app",
+  "version": "0.0.1"
+}
+```
+result:
+```
+<script src="/js/scriptname.js?v=0.0.1"></script>
+```
+
 
 ## Example
 ```
@@ -30,4 +42,3 @@ gulp.task('html', function(){
 		  .pipe($.minifyHtml());
 });
 ```
-
