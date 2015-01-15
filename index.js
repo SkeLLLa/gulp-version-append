@@ -7,8 +7,8 @@ var gutil = require('gulp-util'),
 var defaults = {
 	versionRegex: function (extensions) {
 		var exts = extensions.join('|'),
-			regexString = "(\\.(?:" + exts + ")\\?v=)(\\@version\\@)([\' | \"])";
-		return new RegExp(regexString, "ig");
+			regexString = '(\\.(?:" + exts + ")\\?v=)(\\@version\\@)([\' | \"])';
+		return new RegExp(regexString, 'ig');
 	}
 };
 
@@ -22,7 +22,7 @@ var appendVersionPlugin = function (extensions) {
 		}
 		var pJson = appRoot.require('package.json'),
 			version = pJson && pJson.version;
-		file.contents = new Buffer(file.contents.toString().replace(defaults.versionRegex(extensions), "$1" + version + "$3"));
+		file.contents = new Buffer(file.contents.toString().replace(defaults.versionRegex(extensions), '$1' + version + '$3'));
 		cb(null, file);
 	});
 };
