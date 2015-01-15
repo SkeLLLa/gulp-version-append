@@ -8,7 +8,9 @@
     "gulp-rev-append",
     "cache-busting",
     "cache",
-    "revision"
+    "revision",
+    "version",
+    "versioning"
   ],
   "author": "Alexander Kureniov",
   "email": "s@zxc.pp.ua",
