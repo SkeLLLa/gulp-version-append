@@ -1,4 +1,7 @@
 # gulp-version-append
+[![npm version](https://badge.fury.io/js/gulp-version-append.svg)](http://badge.fury.io/js/gulp-version-append)
+[![Dependency Status](https://david-dm.org/SkeLLLa/gulp-version-append.svg)](https://david-dm.org/SkeLLLa/gulp-version-append)
+
 Gulp plugin to append version from package.json to static file url to avoid caching.
 
 ## Pre-requirements
