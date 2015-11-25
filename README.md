@@ -11,10 +11,13 @@ Have `package.json` file in your project root folder with `version` field.
 In gulp task:
 ```
 ...
-.pipe(versionAppend(options))
+.pipe(versionAppend(extensionsArray[, options]))
 ...
 ```
-`options` - is an array of extensions that require version to be appended, e.g. ['html', 'js', 'css']
+`extensionsArray` - is an array of extensions that require version to be appended, e.g. ['html', 'js', 'css']
+`options` - optional config object for custom params.
+`options.versionFile` - path to json file that contains version in case you're need to use different file instead of package.json (path should be relative to application root folder)
+`options.appendType` - override appending version with timestamp or short "guid" based on date (actually it's a date that counted from the beginning of current year in HEX). Possible values 'version','timestamp','guid', defaults to 'version'
 
 In html code:
 ```
@@ -42,6 +45,23 @@ var gulp = require('gulp'),
 gulp.task('html', function(){
     return gulp.src(path.join(__dirname, '*.html'))
 		  .pipe($.versionAppend(['html', 'js', 'css']))
+		  .pipe($.minifyHtml());
+});
+```
+```
+/// version.json:
+{
+	"version": "0.0.1"
+}
+
+/// gulpfile.js: 
+var gulp = require('gulp'),
+	$ = require('gulp-load-plugins')(),
+	path = require('path');
+
+gulp.task('html', function(){
+    return gulp.src(path.join(__dirname, '*.html'))
+		  .pipe($.versionAppend(['html', 'js', 'css'], {appendType: 'guid', versionFile: 'version.json'}))
 		  .pipe($.minifyHtml());
 });
 ```
