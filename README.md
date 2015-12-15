@@ -10,6 +10,8 @@ Have `package.json` file in your project root folder with `version` field.
 ## Usage
 In gulp task:
 ```
+var versionAppend = require('gulp-version-append');
+
 ...
 .pipe(versionAppend(extensionsArray[, options]))
 ...
