@@ -64,7 +64,6 @@ var gutil = require('gulp-util'),
 				pJson = appRoot.require('package.json');
 				version = pJson && pJson.version;
 			}
-			console.log('AAA', version);
 			file.contents = new Buffer(file.contents.toString().replace(defaults.versionRegex(extensions), '$1' + version + '$3'));
 			cb(null, file);
 		});
